@@ -46,7 +46,7 @@ class HomeViewController: UIViewController {
       
       DispatchQueue.main.asyncAfter(deadline: .now() + 10.0) {
 
-          //If your first viewController is in Navigation stack
+          
           if let secondViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "setLanguageViewController") as? setLanguageViewController {
 
               if let navigator = self.navigationController {
@@ -56,7 +56,6 @@ class HomeViewController: UIViewController {
             
           }
 
-          //If your first viewController is NOT in Navigation stack
           if let secondViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "setLanguageViewController") as? setLanguageViewController {
 
               self.present(secondViewController, animated: true, completion: nil)
